@@ -12,12 +12,6 @@ type Coordinates {
   coordinates: [Coordinate]
 }
 
-type Status {
-  status:String
-  msg: String
-
-}
-
 type Query {
 
   """Returns a GeoJson Polygon representing the legal gameArea"""
