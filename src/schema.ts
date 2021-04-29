@@ -13,15 +13,18 @@ type Coordinates {
 }
 
 type Status {
-  status:String
+  status: String
   msg: String
-
 }
+
 
 type Query {
 
   """Returns a GeoJson Polygon representing the legal gameArea"""
   gameArea : Coordinates 
+
+  """Check whether caller, given his latitude and lontitude, is inside the gameArea"""
+  isUserInArea(latitude:Float!,longitude:Float!):Status!
 }
 `;
 
